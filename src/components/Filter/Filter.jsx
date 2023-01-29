@@ -1,12 +1,10 @@
 import css from './Filter.module.css';
-import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
-import { getFilter } from 'redux/selectors';
-import { changeFilter } from 'redux/filterSlice';
-const filterInputId = nanoid();
+import { selectFilter } from 'redux/selectors';
+import { changeFilter } from 'redux/filter/filterSlice';
 
 export const Filter = () => {
-  const value = useSelector(getFilter);
+  const value = useSelector(selectFilter);
   const dispatch = useDispatch();
 
   const onChange = e => {
@@ -23,7 +21,7 @@ export const Filter = () => {
         type="text"
         value={value}
         onChange={onChange}
-        id={filterInputId}
+        // id={filterInputId}
       />
     </div>
   );

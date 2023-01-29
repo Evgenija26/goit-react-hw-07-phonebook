@@ -3,11 +3,18 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { Contacts } from './Contacts/Contacts';
 // import { nanoid } from 'nanoid';
 import { Filter } from './Filter/Filter';
-import { getContacts } from 'redux/selectors';
-import { useSelector } from 'react-redux';
+import { selectContacts } from 'redux/selectors';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchContacts } from 'redux/contacts/operations';
+import { useEffect } from 'react';
 
 export function App() {
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
     <div>
