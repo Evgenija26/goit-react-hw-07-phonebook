@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Evgenija26.io/goit-react-hw-07-phonebook/static/css/main.cb9def89.css",
-    "main.js": "/Evgenija26.io/goit-react-hw-07-phonebook/static/js/main.4955e743.js",
+    "main.js": "/Evgenija26.io/goit-react-hw-07-phonebook/static/js/main.2887224d.js",
     "index.html": "/Evgenija26.io/goit-react-hw-07-phonebook/index.html",
     "main.cb9def89.css.map": "/Evgenija26.io/goit-react-hw-07-phonebook/static/css/main.cb9def89.css.map",
-    "main.4955e743.js.map": "/Evgenija26.io/goit-react-hw-07-phonebook/static/js/main.4955e743.js.map"
+    "main.2887224d.js.map": "/Evgenija26.io/goit-react-hw-07-phonebook/static/js/main.2887224d.js.map"
   },
   "entrypoints": [
     "static/css/main.cb9def89.css",
-    "static/js/main.4955e743.js"
+    "static/js/main.2887224d.js"
   ]
 }
