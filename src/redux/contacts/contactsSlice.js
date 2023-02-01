@@ -7,9 +7,10 @@ import {
 const extraActions = [fetchContacts, addContacts, deleteContacts];
 const getActions = type => isAnyOf(...extraActions.map(action => action[type]));
 
+const initialState = { items: [], isLoading: false, error: null };
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: { items: [], isLoading: false, error: null },
+  initialState,
   extraReducers: builder =>
     builder
       .addCase(fetchContacts.fulfilled, (state, action) => {
@@ -20,7 +21,7 @@ const contactsSlice = createSlice({
       })
       .addCase(deleteContacts.fulfilled, (state, action) => {
         const index = state.items.findIndex(
-          contact => contact.id !== action.payload.id
+          contact => contact.id === action.payload.id
         );
         state.items.splice(index, 1);
       })

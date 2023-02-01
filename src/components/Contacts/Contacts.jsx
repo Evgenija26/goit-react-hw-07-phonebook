@@ -4,15 +4,13 @@ import { useSelector } from 'react-redux';
 import { selectVisibleContacts } from 'redux/selectors';
 import { useDispatch } from 'react-redux';
 import { deleteContacts } from 'redux/contacts/operations';
-// import { useState } from 'react';
 
-export const Contacts = ({ id }) => {
+export const Contacts = ({ contact }) => {
   const contacts = useSelector(selectVisibleContacts);
   const dispatch = useDispatch();
-  // const [isDeleting, setIsDeleting] = useState(false);
-  // const isLoading = useSelector(selectIsLoading);
+
   const handleDelete = () => {
-    dispatch(deleteContacts(id));
+    dispatch(deleteContacts(contact.id));
   };
   return (
     <ul className={css.ContactsList}>
