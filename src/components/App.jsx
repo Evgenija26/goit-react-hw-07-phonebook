@@ -1,7 +1,6 @@
 import { GlobalStyle } from './GlobalStyle';
 import { ContactForm } from './ContactForm/ContactForm';
 import { Contacts } from './Contacts/Contacts';
-// import { nanoid } from 'nanoid';
 import { Filter } from './Filter/Filter';
 import { selectContacts } from 'redux/selectors';
 import { useSelector, useDispatch } from 'react-redux';
@@ -28,6 +27,7 @@ export function App() {
       ) : (
         'Your phonebook is empty. Add first contact!'
       )}
+
       {contacts.length > 0 && <Contacts />}
     </div>
   );
